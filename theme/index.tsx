@@ -37,6 +37,12 @@ export const styles = StyleSheet.create({
     inputStyle: {
         width: 220,
         color: '#989898'
+    },
+    detailsTextStyle: {
+        color: '#7E7E7E',
+        paddingTop: 1,
+        fontFamily: 'sans-serif',
+        fontSize: 16,
     }
 });
 

@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity, FlatList, Image, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { styles } from '@/theme'
 import {LinearGradient} from 'expo-linear-gradient';
-
+import { useRouter } from 'expo-router';
 
 interface Book {
     id: number;
@@ -48,6 +48,9 @@ const items: Book[] = [
 ]
 
 export default function HomeScreen() {
+
+    const router = useRouter();
+
     return (
         <View className="flex-1">
             <LinearGradient
@@ -125,7 +128,7 @@ export default function HomeScreen() {
                         }
                         renderItem={ ({item}) => {
                             return (
-                                <TouchableOpacity className='bg-white p-3 rounded-2xl mb-3 shadow-sm'>
+                                <TouchableOpacity onPress={ () => router.push({pathname: '/details', params: {name: item.name, authors: item.author}})} className='bg-white p-3 rounded-2xl mb-3 shadow-sm'>
                                     <View>
 
                                         <Image source={require('../assets/book.jpg')} style={{height:210}} className='w-36 mb-2 rounded-2xl'/>

@@ -8,6 +8,9 @@ export default function _layout() {
         screenOptions={{
             headerShown: false
         }}
-    />
+    >
+      <Stack.Screen name="details" options={{ animation: 'slide_from_bottom' }} />  
+      <Stack.Screen name="home" options={{ animation: 'ios' }} />  
+    </Stack>
   )
 }

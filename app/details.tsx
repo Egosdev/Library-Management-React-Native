@@ -10,7 +10,7 @@ export default function Details() {
     <View>
       <View className='flex-row text-center items-center px-6 pt-12'>
         <View>
-            <Pressable style={{width: 30, height: 30}} onPress={ () => router.push('/home')}>
+            <Pressable style={{width: 30, height: 30}} onPress={ () => router.back()}>
               <Image style={styles.iconStyle} source={require('../assets/icons/back.png')}/>
             </Pressable >
         </View>
@@ -25,7 +25,7 @@ export default function Details() {
         <Text style={[styles.detailsTextStyle, {color: '#2F2D2C'}]} className='font-bold'>Kitap adı: {item.name}</Text>
         <Text style={styles.detailsTextStyle}>Yazarlar: {item.authors}</Text>
         <Text style={styles.detailsTextStyle}>ISBN: {item.isbn}</Text>
-        <Text style={styles.detailsTextStyle}>Tür: {item.type}</Text>
+        <Text style={styles.detailsTextStyle}>Tür: {item.genre}</Text>
         <Text style={[styles.detailsTextStyle, {color: '#2F2D2C', paddingTop: 15}]} className='font-bold'>Kısa Açıklama</Text>
         <Text style={styles.detailsTextStyle}>{item.desc}</Text>
       </View>

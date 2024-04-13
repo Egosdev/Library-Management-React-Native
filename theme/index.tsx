@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
@@ -43,6 +43,34 @@ export const styles = StyleSheet.create({
         paddingTop: 1,
         fontFamily: 'sans-serif',
         fontSize: 16,
-    }
+    },
+
+      modalView: {
+        marginTop: 'auto',
+        backgroundColor: 'white',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        padding: 25,
+        alignItems: 'center',
+
+      },
+      sortRadioButtonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        marginTop: 20,
+      },
+      radioButton: {
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#3892E4',
+        borderRadius: 5,
+      },
+      modalBackdrop: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      },
 });
 
